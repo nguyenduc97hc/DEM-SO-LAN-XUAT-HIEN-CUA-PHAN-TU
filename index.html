@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Đếm số lần xuất hiện của phần tử</title>
+</head>
+<body>
+    <script>
+        function timSoLanXuarHien(arr,n) {
+            let dem=0;
+            let vitri = [];
+            for (let i=0;i<arr.length;i++){
+                if (arr[i]==n){
+                    vitri.push(i);
+                    dem++;
+                }
+            }
+            return dem;
+        }
+        function timViTriHien(arr,n) {
+            let dem=0;
+            let vitri = [];
+            for (let i=0;i<arr.length;i++){
+                if (arr[i]==n){
+                    vitri.push(i);
+                    dem++;
+                }
+            }
+            return vitri;
+        }
+        let arr = [];
+        for (let i=0;i<100;i++) {
+            arr[i] = Math.floor(Math.random()*101);
+        }
+        let n = parseInt(prompt("nhap n"));
+        let hien =timSoLanXuarHien(arr,n);
+        alert("So lan xuat hien " + hien +" tai vi tri " + timViTriHien(arr,n))
+
+    </script>
+</body>
+</html>
